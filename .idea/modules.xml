@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/services/libs/text-analyzer-lib-db-config/config-db.iml" filepath="$PROJECT_DIR$/src/services/libs/text-analyzer-lib-db-config/config-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/services/core.iml" filepath="$PROJECT_DIR$/src/services/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/services/text-analyzer-core-services/core-services.iml" filepath="$PROJECT_DIR$/src/services/text-analyzer-core-services/core-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/services/parent.iml" filepath="$PROJECT_DIR$/src/services/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/text-analyzer.iml" filepath="$PROJECT_DIR$/text-analyzer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/services/text-analyzer-book-loader/web-book-loader.iml" filepath="$PROJECT_DIR$/src/services/text-analyzer-book-loader/web-book-loader.iml" />
+    </modules>
+  </component>
+</project>
