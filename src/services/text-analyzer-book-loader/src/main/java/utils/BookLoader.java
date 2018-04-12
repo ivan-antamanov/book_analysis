@@ -1,3 +1,5 @@
+package utils;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -6,7 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class BookLoader {
-    public String readFile(String filePath) throws IOException {
+    public static String readFile(String filePath) throws IOException {
         Path file = Paths.get(filePath);
         StringBuilder stringBuilder = new StringBuilder();
         try (BufferedReader bufferedReader = Files.newBufferedReader(file)) {

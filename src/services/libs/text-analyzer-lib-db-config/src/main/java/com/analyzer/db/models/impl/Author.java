@@ -4,6 +4,7 @@ import com.analyzer.db.models.CommonModel;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -28,7 +29,6 @@ public class Author extends CommonModel {
     }
 
 
-
     @Column(name = "name")
     String name;
 
@@ -36,12 +36,12 @@ public class Author extends CommonModel {
     String surname;
 
     @Column(name = "patronymic") //отчество
-    String patronymic;
+            String patronymic;
 
     @Column(name = "born place")
     String bornPlace;
 
-    @Column(name ="born date")
+    @Column(name = "born date")
     Date bornDate;
 
     @Column(name = "death place")
@@ -152,6 +152,15 @@ public class Author extends CommonModel {
 
     public Set<Book> getBooks() {
         return books;
+    }
+
+    public void addBook(Book book) {
+        if (!books.isEmpty()) {
+            books.add(book);
+        } else {
+            books = new HashSet<Book>();
+            books.add(book);
+        }
     }
 
     public void setBooks(Set<Book> books) {
