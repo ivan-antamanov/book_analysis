@@ -1,11 +1,13 @@
 package com.analyzer.db.models.impl;
 
+import com.analyzer.db.models.CommonModel;
+
 import javax.persistence.*;
 import java.sql.Date;
 
 @Table(name = "book")
 @Entity
-public class Book {
+public class Book extends CommonModel {
 
     public Book() {
     }
@@ -22,10 +24,10 @@ public class Book {
         this.author = author;
     }
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue()
-    Long id;
+//    @Id
+//    @Column(name = "id")
+//    @GeneratedValue()
+//    Long id;
 
     @Column(name = "genre")
     String genre;
@@ -59,13 +61,13 @@ public class Book {
     @JoinColumn(name = "authorId")
     private Author author;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
 //    public Long getAuthorId() {
 //        return authorId;

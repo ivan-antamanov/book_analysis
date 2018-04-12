@@ -1,14 +1,16 @@
 package com.analyzer.db.models.impl;
 
+import com.analyzer.db.models.CommonModel;
+
 import javax.persistence.*;
 
 @Table(name = "Description")
-public class Description {
+public class Description extends CommonModel {
 
-    @Id
-    @Column( name = "id")
-    @GeneratedValue
-    private Long id;
+//    @Id
+//    @Column( name = "id")
+//    @GeneratedValue
+//    private Long id;
 
     @Column(name = "part of speech")
     private String partOfSpeech;
@@ -35,13 +37,13 @@ public class Description {
         this.description = description;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
     public String getPartOfSpeech() {
         return partOfSpeech;

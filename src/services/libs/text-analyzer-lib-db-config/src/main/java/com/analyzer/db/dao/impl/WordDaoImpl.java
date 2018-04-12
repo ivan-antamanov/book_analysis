@@ -18,12 +18,17 @@ public class WordDaoImpl extends AbstractDao<Word> implements WordDao {
 
     @Override
     public void updateWord(Word word) {
-
+        super.update(word);
     }
 
     @Override
-    public Word getWordById(Long id) {
+    public Word getWord(Long id) {
         return super.getById(id);
+    }
+
+    @Override
+    public void removeWord(Long id) {
+        super.remove(id);
     }
 
     @Override

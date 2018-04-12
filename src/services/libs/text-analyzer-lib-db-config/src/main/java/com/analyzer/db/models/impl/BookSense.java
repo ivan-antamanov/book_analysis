@@ -1,16 +1,18 @@
 package com.analyzer.db.models.impl;
 
+import com.analyzer.db.models.CommonModel;
+
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "bookSense")
-public class BookSense {
+public class BookSense extends CommonModel {
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue
-    private Long id;
+//    @Id
+//    @Column(name = "id")
+//    @GeneratedValue
+//    private Long id;
 
     @OneToMany(mappedBy = "sense")
     private Set<Hero> heroes;
@@ -23,13 +25,13 @@ public class BookSense {
             joinColumns = {@JoinColumn(name = "senseId")}, inverseJoinColumns = {@JoinColumn(name = "topicId")})
     private Set<Topic> topics;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
     public Set<Hero> getHeroes() {
         return heroes;
